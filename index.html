@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="image/logo.png" type="image/png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <title>SHAKU</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="#" class="logo"
+        ><img
+          src="image/logo.png"
+          class="logo_img"
+          alt="Logo"
+      /></a>
+
+      <nav class="navbar">
+        <a class="active" href="index.html">INICIO</a>
+        <a href="./views/galeria.html">GALERIA</a>
+        <a href="./views/presupuesto.html">PRESUPUESTO</a>
+        <a href="./views/contacto.html">CONTACTO</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="./views/presupuesto.html" class="fas fa-shopping-cart"></a>
+      </div>
+    </header>
+
+    <!-- BANNER-->
+    <section class="home" id="inicio">
+      <div class="swiper-container home-slider">
+        <div class="swiper-wrapper wrapper">
+          <div class="swiper-slide slide">
+            <div class="content">
+              <span>Nuestro Plato Especial</span>
+              <h3>Sushi Ship</h3>
+              <p>
+                Navega en el mar de sabores que estos tentadores roles de sushi
+                te brindarán
+              </p>
+              
+            </div>
+            <div class="image">
+              <img src="image/food1.png" alt="sushi" />
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="content">
+              <span>Nuestro Plato Especial</span>
+              <h3>Ramen Ichiraku</h3>
+              <p>
+                Poderoso Ramen que suele comer el Shinobi mas poderoso. De
+                cerdo, pollo, camarones o mixto
+              </p>
+             
+            </div>
+            <div class="image">
+              <img src="image/food3.png" alt="sushi" />
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="content">
+              <span>Nuestro Plato Especial</span>
+              <h3>Bento Shaku</h3>
+              <p>
+                Aperitivo a tu gusto preparado en elegante contenedor de madera,
+                para que disfrutes de un almuerzo o merienda al estilo japones
+              </p>
+              
+            </div>
+            <div class="image">
+              <img src="image/food20.png" alt="sushi" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="menu">
+      <h1 class="heading">Noticias</h1>
+      <div class="box-container">
+        <div class="box" id="noticias"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <section class="footer">
+        <div class="box-container">
+          <div class="box">
+            <a href="#" class="logo"
+              ><img
+                src="./image/logo.png"
+                class="logo_img"
+                alt="Logo"
+            /></a>
+          </div>
+          <div class="box">
+            <h3>Navegacion</h3>
+            <a href="#">INICIO</a>
+            <a href="./views/galeria.html">GALERIA</a>
+            <a href="./views/presupuesto.html">PRESUPUESTO</a>
+            <a href="./views/contacto.html">CONTACTO</a>
+          </div>
+          <div class="box">
+            <h3>Contactanos</h3>
+            <a href="#">(34) 972 21 81 88</a>
+            <a href="#">SHAKU@gmail.com</a>
+            <a href="#"> Avinguda del Doctor, Avinguda de Lluís Pericot, 24</a>
+          </div>
+          <div class="box">
+            <h3>Siguenos</h3>
+            <a href="https://www.instagram.com/shakushaku_girona?igsh=ZzlyNmxsZjM5MTlk"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+          </div>
+        </div>
+
+        <div class="credit">
+          Derechos reservados @ 2024 por <span>SHAKU RESTAURANTE</span>
+        </div>
+      </section>
+    </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/noticias.js"></script>
+</html>

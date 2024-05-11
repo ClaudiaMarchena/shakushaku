@@ -1,0 +1,65 @@
+[
+    {
+      "id": 1,
+      "nombre": "Gyozas pollo o verdura",
+      "descripcion": "Masas finas de harina y trigo rellenas de pollo o verdura",
+      "precio": 3.80,
+      "imagen": "Captura de pantalla 2024-04-27 203044 banner.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Hosomaki salmón 8p",
+      "descripcion": "Rollos de sushi cilíndrico, pequeños y rellenos de arroz y salmón",
+      "precio": 3.65,
+      "imagen": "Hosomaki-salmon-presentacion.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Poke bowl salmón",
+      "descripcion": "Bowl combinado de arroz con salmón, aguacate, surimi, pepino, wakame, edamame y cebolla frita.",
+      "precio": 8.50,
+      "imagen": "salmon-poke.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "TEMAKI",
+      "descripcion": "Tipo de sushi elaborado con una hoja de alga nori, combinado de arroz, verduras, salmón y aguacate",
+      "precio": 3.80,
+      "imagen": "temaki-par-2.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Nigiris 4p",
+      "descripcion": "Sushi compuesto por bola de arroz con trozo de salmón, langostino o salmón con queso.",
+      "precio": 3.80,
+      "imagen": "Captura de pantalla 2024-04-27 203428.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Menu sushi",
+      "descripcion": "4 nigiris salmón, 4 nigiris atún, 8 maki ebi, temaki vegetal y 4 crispy pollo.",
+      "precio": 15.95,
+      "imagen": "sushi_Koto.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Mochi té verde",
+      "descripcion": "Pastel japonés hecho de mochigome",
+      "precio": 4.50,
+      "imagen": "foto-2655-6.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Dorayaki",
+      "descripcion": "Dulce japonés consiste de dos bizcochos rellenos de judía roja",
+      "precio": 4.50,
+      "imagen": "dorayaki.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Sake 350ml",
+      "descripcion": "Bebida alcohólica japonesa hecha de arroz fermentado.",
+      "precio": 6.95,
+      "imagen": "sake-japones.jpg"
+    }
+  ]

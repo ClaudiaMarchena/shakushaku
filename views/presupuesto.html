@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../image/logo.png" type="image/png" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <title>SHAKU</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="../image/logo.png" class="logo_img" alt="Logo" />
+        </a>
+        <nav class="navbar">
+            <a href="../index.html">INICIO</a>
+            <a href="./galeria.html">GALERIA</a>
+            <a class="active" href="./presupuesto.html">PRESUPUESTO</a>
+            <a href="./contacto.html">CONTACTO</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="./presupuesto.html" class="fas fa-shopping-cart"></a>
+        </div>
+    </header>
+
+    <section class="menu top" id="productos">
+        <h3 class="sub-heading">
+            <a href="./galeria.html">Seguir comprando</a>
+        </h3>
+        <h3 class="heading">Mi Carrito</h3>
+        <hr />
+        <div class="box-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Importe</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="listCarrito"></tbody>
+                <tfoot id="listDetalle">
+                    <tr>
+                        <td colspan="4"></td>
+                        <td>Subtotal: </td>
+                        <td id="subtotal"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td>Costo de envío: </td>
+                        <td id="envio"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td>Total: </td>
+                        <td id="total"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+
+    <!-- MENU PRESUPUESTO -->
+    <section class="order top" id="presupuesto">
+        <h3 class="sub-heading">Formulario de Solicitud</h3>
+
+        <form action="presupuesto.html" class="formulario" id="formulario">
+
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente.</p>
+          </div>  
+
+          <h3 class="sub-heading">Datos</h3>
+
+            <div class="inputbox">
+                <div class="input formulario__grupo" id="grupo__nombre">
+                    <span>Tu Nombre</span>
+                    <div class="formulario__grupo-input">
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"
+                            class="formulario__input" title="Campo requerido, solo letras." />
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El nombre debe contener solo letras y como máximo 15 caracteres.</p>
+                </div>
+
+                <div class="input formulario__grupo" id="grupo__apellido">
+                    <span>Tu Apellido</span>
+                    <div class="formulario__grupo-input">
+                        <input type="text" name="apellido" id="apellido" placeholder="Escribe tu nombre"
+                            class="formulario__input" title="Campo requerido, solo letras." />
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El apellido debe contener solo letras y como máximo 40 caracteres.</p>
+                </div>
+
+            </div>
+
+            <div class="inputbox">
+                <div class="input formulario__grupo" id="grupo__correo">
+                    <span>Correo</span>
+                    <div class="formulario__grupo-input">
+                        <input type="text" name="correo" id="correo" placeholder="Escribe tu nombre"
+                            class="formulario__input" title="Ingrese un correo válido" />
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El formato no es válido.</p>
+                </div>
+
+                <div class="input formulario__grupo" id="grupo__telefono">
+                    <span>Teléfono de contacto</span>
+                    <div class="formulario__grupo-input">
+                        <input type="text" name="telefono" id="telefono" placeholder="Escribe tu telefono"
+                            class="formulario__input" title="Solo números" />
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El telefono solo debe contener números y máximo 9 dígitos</p>
+                </div>
+            </div>
+
+            <h3 class="sub-heading">Presupuesto</h3>
+            <div class="inputbox">
+                <div class="input formulario__grupo" id="grupo__plazo">
+                    <span>Plazo</span>
+                    <div class="formulario__grupo-input">
+                        <input type="number" name="plazo" id="plazo" placeholder="Ingrese el plazo"
+                            class="formulario__input" title="Ingrese el plazo" />
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El plazo no es válido.</p>
+                </div>
+
+                <div class="input formulario__grupo" id="grupo__extras">
+                  <span>Extras</span>
+                  <div class="formulario__grupo-input">
+                      <label>
+                        <input onchange="fnAgregarExtra()" value="5" name="extra_1" type="checkbox" value="Color personalizado" class="formulario__input" title="Seleccione Color personalizado"> Envio a Domicilio
+                      </label>
+                      <label>
+                        <input onchange="fnAgregarExtra()" value="10" name="extra_2" type="checkbox" value="Tipografía personalizada" class="formulario__input" title="Seleccione Tipografía personalizada"> Incluir Postre y Bebida
+                      </label>
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">Seleccione al menos una opción de extras.</p>
+              </div>
+
+                <div class="input formulario__grupo" id="grupo__presupuesto">
+                    <span>Presupuesto</span>
+                    <div class="formulario__grupo-input">
+                        <input type="number" name="valor_presupuesto" id="valor_presupuesto" placeholder="Escribe el presupuesto"
+                            class="formulario__input"  disabled/>
+                        <input type="hidden" name="valor_act_presupuesto" id="valor_act_presupuesto">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El presupuesto no es válido.</p>
+                </div>
+            </div>
+
+            <h3 class="sub-heading">Aceptación condiciones y envio de presupuesto</h3>
+            <div class="inputbox">
+                <div class="input formulario__grupo" id="grupo__condicion">
+                  <div class="formulario__grupo-input">
+                      <label>
+                          <input type="checkbox" name="condicion" id="condicion"  class="formulario__input"
+                           title="Condiciones"> He leido la politica de privacidad
+                      </label>
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">Seleccione condiciones</p>
+              </div>
+            </div>
+
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <input type="submit" value="Ordenar ahora" class="btn" />
+            </div>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="logo">
+                        <img src="../image/logo.png" class="logo_img" alt="Logo" />
+                    </a>
+                </div>
+                <div class="box">
+                    <h3>Navegacion</h3>
+                    <a href="../index.html">INICIO</a>
+                    <a href="./galeria.html">GALERIA</a>
+                    <a href="./presupuesto.html">PRESUPUESTO</a>
+                    <a href="./contacto.html">CONTACTO</a>
+                </div>
+                <div class="box">
+                    <h3>Contactanos</h3>
+                    <a href="#">(34) 972 21 81 88</a>
+                    <a href="#">SHAKU@gmail.com</a>
+                    <a href="#"> Avinguda del Doctor, Avinguda de Lluís Pericot, 24</a>
+                </div>
+                <div class="box">
+                    <h3>Siguenos</h3>
+                    <a href="https://www.instagram.com/shakushaku_girona?igsh=ZzlyNmxsZjM5MTlk "><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+                </div>
+            </div>
+
+            <div class="credit">
+                Derechos reservados @ 2024 por <span>SHAKU RESTAURANTE</span>
+            </div>
+        </section>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../js/carrito.js"></script>
+<script src="../js/validacion.js"></script>
+
+</html>
